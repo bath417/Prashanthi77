@@ -1,4 +1,8 @@
+# Trade Opportunities API – Developer Task
 
+This project was developed as part of a backend developer assignment to build a FastAPI service that analyzes market opportunities across different sectors in India.
+
+The API collects market data and uses an AI model to generate structured sector analysis reports including trends, opportunities, risks, and future outlook.
 # Trade Opportunities API
 
 ## Introduction
