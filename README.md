@@ -21,38 +21,48 @@ The system collects sector-related information from online sources and uses an A
 
 ---
 
-# Table of Contents
+## Table of Contents
 
-* Introduction
-* System Architecture
-* Application Flow
-* To Run the Application Locally
-* Backend Framework
-* Session Management
-* Rate Limiting
-* Security Best Practices
-* Input Validation
-* AI/Data Sources
-* Storage
-* API Specification
-* Technologies Used
+- [Introduction](#introduction)
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Application Flow](#application-flow)
+- [Security Best Practices](#security-best-practices)
+- [AI and Data Sources](#ai-and-data-sources)
+- [API Specification](#api-specification)
+- [API Documentation](#api-documentation)
+- [API Execution Example](#api-execution-example)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Conclusion](#conclusion)
 
 ---
 
-# System Architecture
+## System Architecture
 
-Client Request
-↓
-FastAPI Endpoint
-↓
-Authentication & Rate Limiting
-↓
-Market Data Collection
-↓
+``` id="ft7zv8"
+Client
+  │
+  ▼
+FastAPI API Server
+  │
+  ├── Authentication Layer
+  │
+  ├── Rate Limiting
+  │
+  ├── Data Collector
+  │       │
+  │       ▼
+  │   Web Search (DuckDuckGo)
+  │
+  ▼
 AI Analysis Engine
-↓
-Markdown Report Generation
-↓
+(Groq Llama Model)
+  │
+  ▼
+Markdown Report Generator
+  │
+  ▼
 API Response
 
 ---
