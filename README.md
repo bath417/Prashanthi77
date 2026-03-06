@@ -1,29 +1,41 @@
-# Trade Opportunities API – Developer Task
-
-This project was developed as part of a backend developer assignment to build a FastAPI service that analyzes market opportunities across different sectors in India.
-
-The API collects market data and uses an AI model to generate structured sector analysis reports including trends, opportunities, risks, and future outlook.
 # Trade Opportunities API
 
-## Introduction
+## INTRODUCTION
 
-This project implements a **FastAPI-based backend service** that analyzes market opportunities in different sectors of the Indian economy.
+Hi Team,
+I have implemented a FastAPI-based backend service for generating market analysis reports for different sectors in the Indian economy. The application follows the assignment requirements including data collection, AI-based analysis, authentication, rate limiting, and input validation.
 
-The API accepts a sector name (for example: agriculture, pharmaceuticals, technology) and generates a **structured market analysis report** containing:
+The API accepts a sector name (for example: agriculture, pharmaceuticals, technology) and generates a structured markdown report containing:
 
-* Sector overview
-* Current market trends
-* Key trade opportunities
-* Risks and challenges
-* Future outlook
+* Sector Overview
+* Current Market Trends
+* Key Trade Opportunities
+* Risks and Challenges
+* Future Outlook
 
-The system collects market-related information from online sources and processes it using an **AI language model** to generate a comprehensive markdown report.
+The system collects sector-related information from online sources and uses an AI language model to generate the analysis report.
+
+---
+
+# Table of Contents
+
+* Introduction
+* System Architecture
+* Application Flow
+* To Run the Application Locally
+* Backend Framework
+* Session Management
+* Rate Limiting
+* Security Best Practices
+* Input Validation
+* AI/Data Sources
+* Storage
+* API Specification
+* Technologies Used
 
 ---
 
 # System Architecture
-
-The application follows a modular architecture where each component handles a specific responsibility.
 
 Client Request
 ↓
@@ -43,56 +55,108 @@ API Response
 
 # Application Flow
 
-1. The client sends a request to the endpoint `/analyze/{sector}`.
+1. The client sends a request to `/analyze/{sector}`.
 2. The API validates the sector input.
 3. API key authentication is verified.
 4. Rate limiting checks are applied.
-5. The system collects relevant market data using web scraping.
-6. The collected data is sent to the AI model for analysis.
-7. The AI model generates a structured market analysis report.
-8. The API returns the generated markdown report as the response.
+5. Market data is collected using web search queries.
+6. The collected data is sent to the AI model.
+7. The AI model generates a structured report.
+8. The API returns the markdown analysis report.
+
+---
+
+# To Run the Application Locally
+
+### Prerequisites
+
+* Python 3.9+
+* pip
+
+### Installation
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+### Configure Environment Variables
+
+Create a `.env` file and add:
+
+SECRET_KEY=test123
+GROQ_API_KEY=your_api_key
+
+### Run the Server
+
+uvicorn main:app --reload
+
+---
+
+# Backend Framework
+
+Library: **FastAPI**
+
+FastAPI is used as the backend framework for building the REST API service. It provides asynchronous request handling, automatic documentation, and high performance.
+
+---
+
+# Session Management
+
+The system tracks user requests in memory. Session information is maintained using Python variables during runtime without using a database.
+
+---
+
+# Rate Limiting
+
+Library: **SlowAPI**
+
+Rate limiting restricts the number of API requests a user can make within a certain time window to prevent abuse.
 
 ---
 
 # Security Best Practices
 
-The application implements several security measures:
-
 ### Authentication
 
 API key authentication is implemented using request headers.
 
-Example header:
+Example:
 
 x-api-key: test123
 
-### Rate Limiting
-
-Rate limiting prevents excessive API usage by restricting the number of requests per user.
-
-### Input Validation
-
-The sector parameter is validated to ensure only valid inputs are accepted.
-
 ### Error Handling
 
-Proper error handling is implemented to manage external API failures and unexpected errors.
+FastAPI HTTPException is used to handle API errors gracefully.
 
 ---
 
-# AI and Data Sources
+# Input Validation
+
+Library: **Pydantic**
+
+Input validation ensures that only valid sector names are accepted by the API.
+
+---
+
+# AI/Data Sources
 
 ### AI Model
 
-The system uses **Groq Llama-3.1 model** to generate structured market analysis reports.
+The system uses **Groq Llama-3.1** to generate structured market analysis reports.
 
-### Data Collection
+### Web Data Collection
 
-Market data is collected using web search queries and processed before sending to the AI model.
+Sector-related market information is collected using web search queries and processed before sending it to the AI model.
 
 ---
 
-# API Endpoint
+# Storage
+
+The application uses **in-memory storage**. No external database is required.
+
+---
+
+# API Specification
 
 ### Analyze Sector
 
@@ -108,65 +172,13 @@ x-api-key: test123
 
 ---
 
-# Example Output
-
-The API returns a structured markdown report containing:
-
-# Sector Overview
-
-# Current Market Trends
-
-# Key Trade Opportunities
-
-# Risks and Challenges
-
-# Future Outlook
-
-# Conclusion
-
----
-
-# Installation
-
-### 1 Install Dependencies
-
-pip install -r requirements.txt
-
-### 2 Configure Environment Variables
-
-Create a `.env` file and add:
-
-SECRET_KEY=test123
-GROQ_API_KEY=your_api_key
-
-### 3 Run the Server
-
-uvicorn main:app --reload
-
----
-
 # API Documentation
 
-FastAPI automatically provides interactive API documentation.
+FastAPI automatically generates API documentation.
 
 Open in browser:
 
 http://127.0.0.1:8000/docs
-
----
-
-# Project Structure
-
-project/
-
-main.py – FastAPI application entry point
-ai_analysis.py – AI model integration
-data_collector.py – Market data collection
-security.py – Authentication logic
-rate_limiter.py – API rate limiting
-utils.py – Input validation utilities
-requirements.txt – Python dependencies
-README.md – Project documentation
 
 ---
 
@@ -184,6 +196,4 @@ README.md – Project documentation
 
 # Conclusion
 
-This project demonstrates the implementation of a backend API service that integrates **data collection, AI-powered analysis, and secure API design** to generate market insights for different sectors of the Indian economy.
-
-
+This project demonstrates how a backend API can integrate web data collection, AI-powered analysis, and secure API design to generate trade opportunity insights for different sectors.
