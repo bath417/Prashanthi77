@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+httpx
+python-dotenv
+PyJWT
+beautifulsoup4
+pydantic
+slowapi
+markdownify
+groq
