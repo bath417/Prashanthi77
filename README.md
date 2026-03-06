@@ -7,7 +7,7 @@ I have implemented a FastAPI-based backend service for generating market analysi
 
 ![image alt](https://github.com/bath417/Prashanthi77/blob/4b81a06bd6df2a2080ed6c17ea915875d89a888e/image.jpeg)
 ![image alt](https://github.com/bath417/Prashanthi77/blob/5d7627896e68bd1c6717422bbf95cffe2811b659/api_request.png%20(2).png)
-![image alt](https://github.com/bath417/Prashanthi77/blob/5d7627896e68bd1c6717422bbf95cffe2811b659/api_request.png%20(2).png)
+![image alt](https://github.com/bath417/Prashanthi77/blob/c7b743dc16a47a1ed0fa72f9e3054b003eaa8c6e/pharma.png)
 ![image alt](https://github.com/bath417/Prashanthi77/blob/5d7627896e68bd1c6717422bbf95cffe2811b659/api_request.png%20(2).png)
 The API accepts a sector name (for example: agriculture, pharmaceuticals, technology) and generates a structured markdown report containing:
 
