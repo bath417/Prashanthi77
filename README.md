@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Trade Opportunities API
 
 ## Introduction
@@ -182,16 +182,4 @@ README.md – Project documentation
 
 This project demonstrates the implementation of a backend API service that integrates **data collection, AI-powered analysis, and secure API design** to generate market insights for different sectors of the Indian economy.
 =======
-# Hi 👋 I'm Prashanthi Srinivas
-🎓 CSE Student | 💻 Interested in AI, Web Development, and Data Science  
 
-## 🚀 Skills
-- Programming: Python, C, C++, Java
-- Web: HTML, CSS, JavaScript
-- Data: SQL, Machine Learning basics
-
-## 📂 Projects
--Airline luggage management system 
--movie ticket booking system 
--built a compiler in compiler design by using mini languages 
->>>>>>> 4078063b87d8467d400c7092cf0546a4e82213eb
