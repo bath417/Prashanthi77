@@ -4,6 +4,7 @@
 
 Hi Team,
 I have implemented a FastAPI-based backend service for generating market analysis reports for different sectors in the Indian economy. The application follows the assignment requirements including data collection, AI-based analysis, authentication, rate limiting, and input validation.
+![image](url:https://github.com/bath417/Prashanthi77/blob/4b81a06bd6df2a2080ed6c17ea915875d89a888e/image.jpeg)
 
 The API accepts a sector name (for example: agriculture, pharmaceuticals, technology) and generates a structured markdown report containing:
 
