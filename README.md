@@ -181,5 +181,5 @@ README.md – Project documentation
 # Conclusion
 
 This project demonstrates the implementation of a backend API service that integrates **data collection, AI-powered analysis, and secure API design** to generate market insights for different sectors of the Indian economy.
-=======
+
 
